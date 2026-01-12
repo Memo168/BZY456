@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义颜色变量 */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-color: #f4f4f4; /* 目标背景颜色 */
+}
+
+/* 暗色模式备用 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-color: #121212;
+  }
+}
+
+/* 正确设置纯背景色 */
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: var(--background-color);
+}
